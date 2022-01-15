@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #06181f;
+}
+
+.container {
+    position: relative;
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .icon {
+    width: 600px;
+    margin-left: 100px;
+}
+
+.container .icon:hover {
+    cursor: pointer;
+}
+
+.container .icon path {
+    fill: transparent;
+    stroke-width: 5;
+    stroke: #31e8ff;
+}
+
+.container .icon.mask path {
+    stroke-dasharray: 1350;
+    stroke-dashoffset: 0;
+}
+
+.container .icon.mask:hover path {
+    animation: animate-mask 6s linear forwards
+}
+
+@keyframes animate-mask {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40% {
+        stroke-dashoffset: 1350u;
+    }
+    80% {
+        stroke-dashoffset: 2700;
+        fill: transparent
+    }
+    100% {
+        stroke-dashoffset: 2700;
+        fill: #31e8ff;
+    }
+}
