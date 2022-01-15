@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #06181f;
+}
+
+.container {
+    position: relative;
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .icon {
+    width: 700px;
+    margin-left: 50px;
+}
+
+.container .icon.k:hover {
+    cursor: pointer;
+}
+
+.container .icon path {
+    fill: transparent;
+    stroke-width: 8;
+    stroke: #31e8ff;
+}
+
+.container .icon.k path {
+    stroke-dasharray: 1680;
+    stroke-dashoffset: 0;
+}
+
+.container:hover path {
+    animation: animate-k 6s linear forwards
+}
+
+@keyframes animate-k {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40% {
+        stroke-dashoffset: 1680;
+    }
+    80% {
+        stroke-dashoffset: 3360;
+        fill: transparent
+    }
+    100% {
+        stroke-dashoffset: 3360u;
+    }
+}
